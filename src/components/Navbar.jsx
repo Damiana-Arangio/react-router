@@ -3,24 +3,25 @@
 /* Import componenti Link e LinkNav per navigare le pagine */
 import { Link, NavLink } from "react-router-dom"
 
+/* Array di oggetti per generare dinamicamente i link della Navbar */
+const links = [
+    {  path: '/', label: 'Home' },
+    {  path: '/chi-siamo', label: 'Chi Siamo ' },
+    {  path: '/prodotti', label: 'Prodotti' },
+]
+
 function Navbar() {
     return(
         <header>
+
+            {/* Barra di Navigazione Principale */}
             <nav>
                 <ul>
-                    <li> 
-                        <Link to="/">Home</Link>
-                    </li>
-
-                    <li> 
-                        <NavLink to="/chi-siamo"> Chi Siamo </NavLink> 
-                    </li>
-
-
-                    <li>
-                        <NavLink to="/prodotti"> Prodotti </NavLink>
-                    </li>
-
+                    {links.map( (link) => (
+                        <li key={link.path}>
+                            <NavLink to={link.path}> {link.label} </NavLink>
+                        </li>
+                     ))}
                 </ul>
             </nav>
         </header>
