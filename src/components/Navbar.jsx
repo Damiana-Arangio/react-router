@@ -7,24 +7,24 @@ import { Link, NavLink } from "react-router-dom"
 const links = [
     {  path: '/', label: 'Home' },
     {  path: '/chi-siamo', label: 'Chi Siamo ' },
-    {  path: '/prodotti', label: 'Prodotti' },
+    {  path: '/prodotti', label: 'Prodotti' }
 ]
 
 function Navbar() {
     return(
-        <header>
-
+        
+        <>
             {/* Barra di Navigazione Principale */}
             <nav>
                 <ul>
-                    {links.map( (link) => (
+                    { links.map( (link) => (
                         <li key={link.path}>
                             <NavLink to={link.path}> {link.label} </NavLink>
                         </li>
                      ))}
                 </ul>
             </nav>
-        </header>
+        </>
     )
 }
 

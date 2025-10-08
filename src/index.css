@@ -1,17 +1,49 @@
+/**********************
+    REGOLE GENERALI
+***********************/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 15px;
   line-height: 1.5;
-  font-weight: 400;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
+ul {
+  list-style-type: none;
+}
+
+/*************************** 
+    CLASSI RIUTILIZZABILI
+****************************/
+.container {
+  max-width: 1200px;
+  text-align: center;
+}
+
+/***********
+    HEADER
+************/
+
+
+/***********
+    HOME
+************/
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2rem;
 }
-
+.img-promozionale {
+  width: 350px;
+  height: 350px;
+}
