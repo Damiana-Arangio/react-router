@@ -28,6 +28,10 @@ https://fakestoreapi.com/
 <br>
 <br>
 ![Chi Siamo](./public/screenshot-chisiamo.png)
+<br>
+<br>
+<br>
+![Prodotti](./public/screenshot-prodotti.png)
 
 ## Tecnologie utilizzate
 
