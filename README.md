@@ -1,16 +1,37 @@
-# React + Vite
+<h1 align="center"> React Router </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Consegna
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Creiamo il frontend del nostro mini e-commerce e le sue pagine principali!
+Useremo Fake Store API come backend fittizio per simulare i dati dei prodotti.
 
-## React Compiler
+https://fakestoreapi.com/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Obiettivi
 
-## Expanding the ESLint configuration
+1. Installiamo **React Router DOM:** `npm i react-router-dom`
+2. Creiamo almeno 3 pagine principali:
+    - Homepage (con un messaggio di benvenuto o immagine promozionale)
+    - Chi siamo
+    - Prodotti (pagina che mostrerà la lista dei prodotti prendendoli da https://fakestoreapi.com/products)
+3. Implementiamo una Navbar visibile in tutte le pagine per navigare tra di esse
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Bonus
+
+- Centralizziamo la Navbar usando un componente `Layout`
+- Gestiamo la classe `active` per i link attivi nella Navbar
+
+## Anteprima
+![Homepage](./public/screenshot-home.png)
+<br>
+<br>
+<br>
+![Chi Siamo](./public/screenshot-chisiamo.png)
+
+## Tecnologie utilizzate
+
+- React + Vite
+- React Router DOM
+- Axios
+
