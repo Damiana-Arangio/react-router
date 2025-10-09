@@ -147,28 +147,35 @@ h1 {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 40px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 /* Singola card */
 .card {
   flex-basis: calc((100%/4) - 40px);
   margin: 0 auto;
+  padding: 10px 10px 20px;
 }
 
-/* Contenitore immagine prodotto */
+.card:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Contenitore immagine prodotti */
 .container-img-prodotto {
     background-color: #ECECEC;
 }
 
-/* Immagine prodotto */
+/* Immagine prodotti */
 .img-prodotto{
   width: 90%;
   height: 250px;
   padding: 30px;
 }
 
-/* Titolo prodotto */
+/* Titolo prodotti */
 .titolo-prodotto {
   font-size: 1rem;
   text-align: center;
@@ -177,7 +184,7 @@ h1 {
   
 }
 
-/* Prezzo + Categoria prodotto */
+/* Prezzo + Categoria prodotti */
 .description-card li {
   text-align: start;
 }
@@ -185,5 +192,15 @@ h1 {
 .prezzo {
   color: rgb(251, 107, 5);
   font-weight: bold;
+}
+
+/**********************
+    DETTAGLI PRODOTTO
+***********************/
+
+/* Link per dettagli prodotto */
+a {
+  text-decoration: none;
+  color: black;
 }
 
