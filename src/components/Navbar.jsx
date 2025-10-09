@@ -11,8 +11,11 @@ const links = [
 ]
 
 function Navbar() {
+
+    /***************
+        RENDERING
+    ****************/ 
     return(
-        
         <>
             {/* Barra di Navigazione Principale */}
             <nav>

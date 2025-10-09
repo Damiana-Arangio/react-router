@@ -2,6 +2,10 @@
 
 
 function ChiSiamo() {
+
+    /***************
+        RENDERING
+    ****************/ 
     return (
         <div className="container-page">
 

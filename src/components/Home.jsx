@@ -1,7 +1,10 @@
 /************************** Componente Pagina Principale ****************************/
 
-
 function Home() {
+
+    /***************
+        RENDERING
+    ***************/
     return(
 
         <div className="container-page">
