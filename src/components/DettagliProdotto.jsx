@@ -35,33 +35,33 @@ function DettagliProdotto() {
         <div className="container-page">
             <h1> Fake Store API </h1>
 
-            {/* Se l'API non ha risposto -> prodottoIsEmpty === true */}
-            { prodottoIsEmpty ? (
-                <p> Loading </p>
-            ) 
-            
-            /* Se l'API ha risposto -> prodottoIsEmpty === false */
-            : (
-
-                <div className="container-flex-left-right">
-
-                    {/* Immagine Prodotto */}
-                    <div className="container-left">
-                        <figure>
-                            <div>immagine prodotto</div>
-                            {/* <img className="img-promozionale" src="./src/assets/img/marketing-festività.png" alt="immagine marketing" /> */}
-                        </figure>
+            { 
+                /* Se l'API non ha risposto -> prodottoIsEmpty === true */
+                prodottoIsEmpty ? (
+                    <div className="container-loading">
+                        <div className="cerchio-loading-rotante">  </div>
+                        <span className="scritta-loading"> LOADING </span>
                     </div>
-
-                    {/* Dettagli Prodotto */}
-                    <div className="container-right">
-                        <h3> TITOLO PRODOTTO</h3>
-                        <p className="text-promozionale"> Desccrizione prodotto con id: {id} </p>
-                    </div>
-                </div>
-            )
+                ) 
                 
-            
+                /* Se l'API ha risposto -> prodottoIsEmpty === false */
+                : (
+                    <div className="container-flex-left-right">
+                        {/* Immagine Prodotto */}
+                        <div className="container-left">
+                            <figure>
+                                <div>immagine prodotto</div>
+                                {/* <img className="img-promozionale" src="./src/assets/img/marketing-festività.png" alt="immagine marketing" /> */}
+                            </figure>
+                        </div>
+
+                        {/* Dettagli Prodotto */}
+                        <div className="container-right">
+                            <h3> TITOLO PRODOTTO</h3>
+                            <p className="text-promozionale"> Desccrizione prodotto con id: {id} </p>
+                        </div>
+                   </div>
+                )
             }
 
         </div>
@@ -75,7 +75,6 @@ function DettagliProdotto() {
     function fetchSingoloProdotto() {
         axios.get(`https://fakestoreapi.com/products/${id}`)
             .then((risSingoloProdotto) => {
-
 
                 // Simula ritardo di 2 secondi (2000 ms)
                 setTimeout(() => {

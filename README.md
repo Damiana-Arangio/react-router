@@ -49,6 +49,10 @@ Completiamo il nostro routing aggiungendo la pagina di dettaglio prodotto!
 
 ## Anteprima
 ![Prodotto Cliccabile](./public/screenshot-prodotto-cliccabile.png)
+<br>
+<br>
+<br>
+![Schermata Loading](./public/screenshot-loading.png)
 
 ## Tecnologie utilizzate
 
