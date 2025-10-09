@@ -1,8 +1,8 @@
 /************************ Componente Dettagli Prodotto ******************************/
 
-import { useState, useEffect } from "react"         // import useEffect e useState per recuperare il singolo oggetto dall'API e salvarlo nella variabile di stato "prodotto"
-import { useParams } from "react-router-dom";       // import useParams per recuperare l'id dall'URL
-import { Link } from "react-router-dom";            // import Link per icona "freccia torna indietro"
+import { useState, useEffect } from "react"                      // import useEffect e useState per recuperare il singolo oggetto dall'API e salvarlo nella variabile di stato "prodotto"
+import { useNavigate, useParams } from "react-router-dom";       // import useParams per recuperare l'id dall'URL e useNavigate per ritornare alla lista dei prodotti in caso di errore nella risposta API
+import { Link } from "react-router-dom";                         // import Link per icona "freccia torna indietro"
 
 function DettagliProdotto() {
 
@@ -16,6 +16,9 @@ function DettagliProdotto() {
     /* Hook di Stato */
     const [prodottoIsEmpty, setProdottoIsEmpty] = useState(true);               // Flag di stato per tenere traccia se i dati sono stati caricati dall'API 
     const [singoloProdotto, setsingoloProdotto] = useState(prodottoIsEmpty);    // Variabile di stato contentente un singolo prodotto (in base all'id corrente) ritornato dall'API
+
+    /* Hook di Navigazione */
+    const navigate = useNavigate();                                             // Riporta l'utente alla lista dei prodotti in caso di di errore nella risposta API 
 
     /* Hook di Effetto */
     useEffect(() => {
@@ -77,6 +80,8 @@ function DettagliProdotto() {
     /* Richiesta API per ottenere il prodotto con id corrente recuperato da URL*/
     function fetchSingoloProdotto() {
         axios.get(`https://fakestoreapi.com/products/${id}`)
+
+            /* Gestione risposta API in caso di successo */
             .then((risSingoloProdotto) => {
 
                 // Simula ritardo di 2 secondi (2000 ms)
@@ -85,7 +90,12 @@ function DettagliProdotto() {
                     setProdottoIsEmpty(false);
                 }, 2000);
             })
-            .catch((err) => {console.error(err)});
+
+            /* Gestione risposta API in caso di errore */
+            .catch((err) => {
+                console.error("Errore durante il recupero del prodotto:", err);
+                navigate('/prodotti');/* riporta l'utente alla lista dei prodotti */
+            });
     }
 }
 

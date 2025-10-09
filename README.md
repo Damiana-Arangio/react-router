@@ -57,6 +57,10 @@ Completiamo il nostro routing aggiungendo la pagina di dettaglio prodotto!
 <br>
 <br>
 ![Schermata Singolo Prodotto](./public/screenshot-singolo-prodotto.png)
+<br>
+<br>
+<br>
+![Schermata Singolo Prodotto](./public/screenshot-NotFound.png)
 
 ## Tecnologie utilizzate
 

@@ -5,7 +5,7 @@ import ChiSiamoPage from './pages/ChiSiamoPage';                  // Pagina chi 
 import ProdottiPage from './pages/ProdottiPage';                  // Pagina prodotti
 import Layout from './layouts/Layout';                            // Pagina layout
 import DettagliProdottoPage from './pages/DettagliProdottoPage';  // Pagina dettagli prodotto
-
+import NotFoundPage from './pages/NotFoundPage';
 function App() {
 
   return (
@@ -26,8 +26,11 @@ function App() {
             <Route path = "/prodotti">    {/* Rotta Padre Prodotto */}
               <Route path = "" element={<ProdottiPage/>} />
               <Route path = ":id" element={<DettagliProdottoPage/>} />
-            </Route>
+            </Route>          
           </Route>
+
+          <Route path="*" element={<NotFoundPage />} />    {/* Rotta 404 - per gestire percorsi inesistenti */}
+
         </Routes>
       </BrowserRouter>
     </>
