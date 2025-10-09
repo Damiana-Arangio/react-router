@@ -9,7 +9,7 @@ function Home() {
 
         <div className="container-page">
            
-            <h1> Fake Store API </h1>
+            {/* <h1> Fake Store API </h1> */}
             <div className="container-flex-left-right">
 
                 {/* Immagine Promozionale */}

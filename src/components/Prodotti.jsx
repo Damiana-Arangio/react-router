@@ -23,7 +23,6 @@ function Prodotti() {
     ****************/ 
     return (
         <>
-            <h1> Fake Store API </h1>
             <div className="container-page container-cards">
                 {/* Ciclo la lista dei prodotti e passo ogni oggetto come props al componente figlio ProdottoCard */}
                 {ListaProdotti.map( prodotto =>(
