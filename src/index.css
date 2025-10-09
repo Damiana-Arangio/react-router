@@ -49,17 +49,14 @@ ul {
 /* Container left */
 .container-left {
   flex-basis: 40%;
-
-    /* Debug */
-      /* background-color: rgb(0, 164, 49); */
 }
 
 /* Container right */
 .container-right {
   flex-basis: 60%;
 
-  /* Debug */
-  /* background-color: red; */
+  /* Position */
+    position: relative;       /* Posizione relativa per freccia "torna indietro" */
 }
 
 /* Titolo Container right */
@@ -254,7 +251,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-/* Sezione Prodotto con Dettagli */
+/** Sezione Singolo Prodotto */
 .img-singolo-prodotto {
   width: 280px;
   height: 280px;
@@ -283,5 +280,15 @@ a {
 .categoria-singolo-prodotto {
   font-weight: bold;
   padding-top: 30px;
+}
+
+/* Freccia */
+.fa-arrow-left {
+  font-size: 5rem;
+  padding: 20px 0px 70px;
+
+  /* Position */
+  position: absolute;
+  right: 50%;
 }
 

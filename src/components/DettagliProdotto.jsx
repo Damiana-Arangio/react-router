@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"         // import useEffect e useState per recuperare il singolo oggetto dall'API e salvarlo nella variabile di stato "prodotto"
 import { useParams } from "react-router-dom";       // import useParams per recuperare l'id dall'URL
+import { Link } from "react-router-dom";            // import Link per icona "freccia torna indietro"
 
 function DettagliProdotto() {
 
@@ -39,25 +40,30 @@ function DettagliProdotto() {
                 
                 /* Se l'API ha risposto -> prodottoIsEmpty === false */
                 : (
-                    <div className="container-flex-left-right">
+                    <>
+                        <div className="container-flex-left-right">
 
-                        {/* Immagine Prodotto */}
-                        <div className="container-left">
-                            <figure>
-                                <img className="img-singolo-prodotto" src={singoloProdotto.image} alt="immagine prodotto" />
-                            </figure>
-                        </div>
+                            {/* Immagine Prodotto */}
+                            <div className="container-left">
+                                <figure>
+                                    <img className="img-singolo-prodotto" src={singoloProdotto.image} alt="immagine prodotto" />
+                                </figure>
+                            </div>
 
-                        {/* Dettagli Prodotto */}
-                        <div className="container-right">  
-                            <ul className="description-singolo-prodotto">
-                                <li> <h3 className="titolo-singolo-prodotto"> {singoloProdotto.title} </h3> </li>
-                                <li> {singoloProdotto.description} </li>
-                                <li className="categoria-singolo-prodotto"> {singoloProdotto.category} </li>
-                                <li className="prezzo"> {singoloProdotto.price} € </li>
-                            </ul>
+                            {/* Dettagli Prodotto */}
+                            <div className="container-right">  
+                                <ul className="description-singolo-prodotto">
+                                    <li> <h3 className="titolo-singolo-prodotto"> {singoloProdotto.title} </h3> </li>
+                                    <li> {singoloProdotto.description} </li>
+                                    <li className="categoria-singolo-prodotto"> {singoloProdotto.category} </li>
+                                    <li className="prezzo"> {singoloProdotto.price} € </li>
+                                </ul>
+
+                                {/* Link per tornare alla pagina precedente */}
+                                <Link to="/prodotti"> <i className="fa-solid fa-arrow-left"></i> </Link>
+                            </div>
                         </div>
-                   </div>
+                    </>
                 )
             }
 
