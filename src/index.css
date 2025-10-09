@@ -41,7 +41,6 @@ ul {
 /* Container left-right */
 .container-flex-left-right {
   width: 80%;
-  height: 150px;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -50,12 +49,17 @@ ul {
 /* Container left */
 .container-left {
   flex-basis: 40%;
+
+    /* Debug */
+      /* background-color: rgb(0, 164, 49); */
 }
 
 /* Container right */
 .container-right {
   flex-basis: 60%;
-  max-height: 100%;
+
+  /* Debug */
+  /* background-color: red; */
 }
 
 /* Titolo Container right */
@@ -181,7 +185,6 @@ h1 {
   text-align: center;
   margin: 10px 0px;
   min-height: 35px;
-  
 }
 
 /* Prezzo + Categoria prodotti */
@@ -239,6 +242,7 @@ a {
   }
 }
 
+/* Scritta Loaging centrata */
 .scritta-loading {
   font-size: 1.2rem;
   font-weight: bold;
@@ -248,5 +252,36 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
+
+/* Sezione Prodotto con Dettagli */
+.img-singolo-prodotto {
+  width: 280px;
+  height: 280px;
+  padding-right: 10px;
+}
+
+.description-singolo-prodotto {
+  padding-right: 60px;
+}
+
+/* Titolo Singolo Prodotto (Pagina DettagliProdotto) */
+.titolo-singolo-prodotto {
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px 0px;
+  min-height: 35px;
+}
+
+/* li discendenti da description-singolo-prodotto tranne titolo */
+.description-singolo-prodotto li:not(.titolo-singolo-prodotto) {
+  text-align: start;
+  font-size: 1.3rem;
+}
+
+/* Categoria */
+.categoria-singolo-prodotto {
+  font-weight: bold;
+  padding-top: 30px;
+}
+

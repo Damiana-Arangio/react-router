@@ -10,27 +10,20 @@ function DettagliProdotto() {
     ***********/ 
 
     /* Hook di Parametro */
-    const { id } = useParams();                                              // Recupero l'id dall'URL
+    const { id } = useParams();                                                 // Recupero l'id dall'URL
 
     /* Hook di Stato */
     const [prodottoIsEmpty, setProdottoIsEmpty] = useState(true);               // Flag di stato per tenere traccia se i dati sono stati caricati dall'API 
     const [singoloProdotto, setsingoloProdotto] = useState(prodottoIsEmpty);    // Variabile di stato contentente un singolo prodotto (in base all'id corrente) ritornato dall'API
 
-    /* DEBUG */
-    console.log("INIZIO");
-    console.log("Singolo prodotto: ", singoloProdotto)
-    console.log("flag: ", prodottoIsEmpty)
-
     /* Hook di Effetto */
     useEffect(() => {
-        fetchSingoloProdotto();                                             //Chiamata Api al montaggio del componente
-
-        /* DEBUG */
-        console.log("MONTAGGIO");
-        console.log("Singolo prodotto: ", singoloProdotto)
-        console.log("flag: ", prodottoIsEmpty)
+        fetchSingoloProdotto();                                                 //Chiamata Api al montaggio del componente
     }, []);
-    
+
+    /****************
+        RENDERING
+    ****************/ 
     return (
         <div className="container-page">
             <h1> Fake Store API </h1>
@@ -47,18 +40,22 @@ function DettagliProdotto() {
                 /* Se l'API ha risposto -> prodottoIsEmpty === false */
                 : (
                     <div className="container-flex-left-right">
+
                         {/* Immagine Prodotto */}
                         <div className="container-left">
                             <figure>
-                                <div>immagine prodotto</div>
-                                {/* <img className="img-promozionale" src="./src/assets/img/marketing-festività.png" alt="immagine marketing" /> */}
+                                <img className="img-singolo-prodotto" src={singoloProdotto.image} alt="immagine prodotto" />
                             </figure>
                         </div>
 
                         {/* Dettagli Prodotto */}
-                        <div className="container-right">
-                            <h3> TITOLO PRODOTTO</h3>
-                            <p className="text-promozionale"> Desccrizione prodotto con id: {id} </p>
+                        <div className="container-right">  
+                            <ul className="description-singolo-prodotto">
+                                <li> <h3 className="titolo-singolo-prodotto"> {singoloProdotto.title} </h3> </li>
+                                <li> {singoloProdotto.description} </li>
+                                <li className="categoria-singolo-prodotto"> {singoloProdotto.category} </li>
+                                <li className="prezzo"> {singoloProdotto.price} € </li>
+                            </ul>
                         </div>
                    </div>
                 )
@@ -81,20 +78,8 @@ function DettagliProdotto() {
                     setsingoloProdotto(risSingoloProdotto.data);
                     setProdottoIsEmpty(false);
                 }, 2000);
-
-                /* DEBUG */
-                console.log("DENTRO .THEN");
-                console.log("Singolo prodotto: ", singoloProdotto)
-                console.log("flag: ", prodottoIsEmpty)
             })
-            .catch((err) => {
-
-                /* DEBUG */
-                console.log("DENTRO .CATCH");
-                console.log("Singolo prodotto: ", singoloProdotto)
-                console.log("flag: ", prodottoIsEmpty)
-                console.log(err);
-            });
+            .catch((err) => {console.error(err)});
     }
 }
 

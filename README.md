@@ -53,6 +53,10 @@ Completiamo il nostro routing aggiungendo la pagina di dettaglio prodotto!
 <br>
 <br>
 ![Schermata Loading](./public/screenshot-loading.png)
+<br>
+<br>
+<br>
+![Schermata Singolo Prodotto](./public/screenshot-singolo-prodotto.png)
 
 ## Tecnologie utilizzate
 
