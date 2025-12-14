@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/assets/img/boolean-logo.png" alt="Boolean Logo" width="35">
+  <img src="./public/boolean-logo.png" alt="Boolean Logo" width="35">
 </p>
 
 <h1 align="center">React Router Store</h1>
