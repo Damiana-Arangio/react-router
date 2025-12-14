@@ -1,70 +1,88 @@
-<h1 align="center"> React Router Store </h1>
+<p align="center">
+  <img src="./src/assets/img/boolean-logo.png" alt="Boolean Logo" width="35">
+</p>
 
-## Consegna - 1 Parte
+<h1 align="center">React Router Store</h1>
 
-Creiamo il frontend del nostro mini e-commerce e le sue pagine principali!
-Useremo Fake Store API come backend fittizio per simulare i dati dei prodotti.
+Interfaccia frontend sviluppata con React che simula un mini e-commerce, con navigazione multi-pagina e routing dinamico.
 
-https://fakestoreapi.com/
+---
 
-## Obiettivi
+## Obiettivo
 
-1. Installiamo **React Router DOM:** `npm i react-router-dom`
-2. Creiamo almeno 3 pagine principali:
-    - Homepage (con un messaggio di benvenuto o immagine promozionale)
-    - Chi siamo
-    - Prodotti (pagina che mostrerà la lista dei prodotti prendendoli da https://fakestoreapi.com/products)
-3. Implementiamo una Navbar visibile in tutte le pagine per navigare tra di esse
+### Prima parte – Navigazione e pagine principali
 
-## Bonus
+- Creare il frontend di un mini e-commerce
+- Implementare il routing tramite React Router DOM
+- Realizzare le seguenti pagine principali:
+  - **Homepage**, con contenuto di benvenuto o immagine promozionale
+  - **Chi siamo**
+  - **Prodotti**, con lista di prodotti recuperati da API
+- Integrare una **Navbar** visibile in tutte le pagine
+- Recuperare i dati dei prodotti da Fake Store API
 
-- Centralizziamo la Navbar usando un componente `Layout`
-- Gestiamo la classe `active` per i link attivi nella Navbar
+**Bonus**
+- Centralizzare la Navbar tramite un componente `Layout`
+- Gestire lo stato attivo dei link nella Navbar
 
-## Anteprima
+---
+
+## Anteprima – Pagine principali
+
 ![Homepage](./public/screenshot-home.png)
-<br>
-<br>
-<br>
+
 ![Chi Siamo](./public/screenshot-chisiamo.png)
-<br>
-<br>
-<br>
+
 ![Prodotti](./public/screenshot-prodotti.png)
 
-## Consegna - 2 Parte
+---
 
-Completiamo il nostro routing aggiungendo la pagina di dettaglio prodotto!
+### Seconda parte – Dettaglio prodotto e routing dinamico
 
-## Obiettivi
+- Rendere cliccabili i prodotti nella pagina di listato
+- Implementare una pagina di dettaglio prodotto
+- Recuperare i dati del singolo prodotto tramite parametro dinamico `id`
+- Configurare il routing dinamico per la lettura dell’ID dalla URL
 
-- nella pagina Prodotti, ogni prodotto deve essere cliccabile (usa il componente Link)
-- Aggiungiamo la pagina di dettaglio per ogni prodotto, con le informazioni prese da https://fakestoreapi.com/products/:id
-- Configuriamo il routing dinamico per leggere l’id del prodotto dalla URL
+**Bonus**
+- Gestire la navigazione programmatica in caso di prodotto non esistente
+- Aggiungere una pagina **404**
+- Implementare uno stato di **loading** durante il caricamento del dettaglio prodotto
 
-##Bonus
-- Aggiungiamo una navigazione programmatica che riporti alla pagina di listato se viene cercato un prodotto che non esiste;
-- Aggiungiamo una pagina 404;
-- Aggiungiamo un loading per caricamento del dettaglio prodotto.
+---
 
-## Anteprima
-![Prodotto Cliccabile](./public/screenshot-prodotto-cliccabile.png)
+## Anteprima – Dettaglio prodotto
 <br>
+
+
+**Prodotto cliccabile dalla lista (interazione hover)**
 <br>
+![Prodotto interattivo](./public/screenshot-prodotto-cliccabile.png)
+
 <br>
-![Schermata Loading](./public/screenshot-loading.png)
+
+
+**Stato di caricamento del dettaglio prodotto**
+![Schermata loading](./public/screenshot-loading.png)
+
 <br>
+
+
+**Pagina di dettaglio del singolo prodotto**
+![Schermata singolo prodotto](./public/screenshot-singolo-prodotto.png)
+
 <br>
+
+**Pagina 404 per prodotto non trovato**
+![Schermata 404](./public/screenshot-NotFound.png)
+
 <br>
-![Schermata Singolo Prodotto](./public/screenshot-singolo-prodotto.png)
-<br>
-<br>
-<br>
-![Schermata Singolo Prodotto](./public/screenshot-NotFound.png)
+
 
 ## Tecnologie utilizzate
 
-- React + Vite
+- React
 - React Router DOM
+- JavaScript
 - Axios
-
+- CSS3
